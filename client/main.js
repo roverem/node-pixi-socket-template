@@ -1,9 +1,11 @@
+import { Game } from "./js/game.js";
+
 export let SOCKET = io();
 
 let _w = window.innerWidth;
 let _h = window.innerHeight;
 
-const app = new PIXI.Application({ 
+export const APP = new PIXI.Application({ 
 	view: game_canvas,
 	width: _w,
 	height: _h,
@@ -20,7 +22,7 @@ if(!PIXI.utils.isWebGLSupported()){
   type = "canvas"
 }
 
-document.body.appendChild(app.view);
+document.body.appendChild(APP.view);
 
 PIXI.utils.sayHello(type);
 
@@ -32,3 +34,6 @@ function resize(){
 
 	app.renderer.resize(_w, _h);
 }
+
+
+let game = new Game();
