@@ -32,7 +32,7 @@ function resize(){
 	_w = window.innerWidth;
 	_h = window.innerHeight;
 
-	app.renderer.resize(_w, _h);
+	APP.renderer.resize(_w, _h);
 }
 
 
